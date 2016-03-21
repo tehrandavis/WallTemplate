@@ -29,7 +29,7 @@ public class AlignmentAlert : MonoBehaviour {
 
 		rend = GetComponent<Renderer>();
 		rend.enabled = true;
-		flickerFreq = 0.3f; // flicker at 3Hz
+		flickerFreq = 1/8f; // flicker at 3Hz
 		flickerTimer = 0;
 		rayDirection = transform.position.z;
 

@@ -14,14 +14,15 @@ using UnityEngine.SceneManagement;
 
 public class goTrigger : MonoBehaviour {
 
-	int ready;
+	public int ready;
 	float trialCountdown;
-	public int trialNumber;
+//	public int trialNumber;
 	public bool trialStart;
+	public int goTrial;
 
 	void Start () {
 		trialCountdown = 3;
-		trialNumber = PlayerPrefs.GetInt ("trialNumber"); // get the trial number
+//		trialNumber = PlayerPrefs.GetInt ("trialNumber"); // get the trial number
 		trialStart = false;
 	}
 
@@ -34,8 +35,8 @@ public class goTrigger : MonoBehaviour {
 			trialStart = true;
 			Debug.Log("Player entered the trial trigger");	
 
-			trialNumber++;
-			PlayerPrefs.SetInt("trialNumber", trialNumber);
+//			trialNumber++;
+//			PlayerPrefs.SetInt("trialNumber", trialNumber);
 			ready = 1;
 
 			return trialStart;
@@ -59,8 +60,12 @@ public class goTrigger : MonoBehaviour {
 		}
 
 		if (trialCountdown < 0){
-			PlayerPrefs.SetInt("trialNumber", trialNumber);
-			SceneManager.LoadScene( "TableActive" );
+			goTrial = 1;
 		}
+
+//		if (trialCountdown < 0){
+//			PlayerPrefs.SetInt("trialNumber", trialNumber);
+//			SceneManager.LoadScene( "TableActive" );
+//		}
 	}
 }

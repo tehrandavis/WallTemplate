@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B0AD4458-1FCE-79CA-FA78-C3F86A3B2F3F}</ProjectGuid>
+    <ProjectGuid>{93F2003A-48E8-FF60-1A73-57F95733E926}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -45,7 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AlignmentAlert.cs" />
+     <Compile Include="Assets\Scripts\AlignmentAlert.cs" />
      <Compile Include="Assets\Scripts\Debugging\showPosition.cs" />
      <Compile Include="Assets\Scripts\Debugging\showPositionActive.cs" />
      <Compile Include="Assets\Scripts\GameLogic\Saver.cs" />
@@ -67,7 +67,6 @@
      <Compile Include="Assets\Scripts\PlayerControlKeyboard\Player2Ctrl.cs" />
      <Compile Include="Assets\Scripts\PlayerControlKeyboard\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PlayerControlKeyboard\PlayerController2.cs" />
-     <Compile Include="Assets\Scripts\PlayerControlTracker\Sensor1VP.cs" />
      <Compile Include="Assets\Scripts\Polhemus2Unity\Sensor.cs" />
      <Compile Include="Assets\Scripts\Polhemus2Unity\SensorN.cs" />
      <Compile Include="Assets\Scripts\Polhemus2Unity\VRPN.cs" />
@@ -79,6 +78,7 @@
      <Compile Include="Assets\Scripts\Timing\playerPosStream.cs" />
      <Compile Include="Assets\Scripts\Timing\rawDataStream.cs" />
      <Compile Include="Assets\Scripts\Timing\trialCountdown.cs" />
+     <Compile Include="Assets\Scripts\ZaxisSwap.cs" />
      <Compile Include="Assets\Scripts\dataManager.cs" />
      <Compile Include="Assets\Sprites\splashScreen.cs" />
      <Compile Include="Assets\U3D\AggregateException.cs" />
@@ -89,7 +89,6 @@
      <Compile Include="Assets\U3D\Threading\example\BasicTests.cs" />
      <Compile Include="Assets\U3D\Threading\example\Examples.cs" />
      <Compile Include="Assets\U3D\Threading\example\LeaderboardTest.cs" />
-     <Compile Include="Assets\ZaxisSwap.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

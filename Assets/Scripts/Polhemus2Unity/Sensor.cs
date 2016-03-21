@@ -104,8 +104,9 @@ public class Sensor : MonoBehaviour {
 
 	//////////////////////
 
-	public List<Vector3> SensorData = new List<Vector3>(); //
-	public List<Vector3> tablePositions = new List<Vector3>();
+
+	public List<string> SensorData = new List<string>(); //
+	public List<string> tablePositions = new List<string>();
 
 	// Timers
 	public List<string> Clockupdate = new List<string>(); // better to attach to dataManager.cs
@@ -177,8 +178,8 @@ public class Sensor : MonoBehaviour {
 		// Get data from the Polhemus
 		updatePDIposition = VRPN.vrpnTrackerPos(deviceName + "@" + deviceIP,sensor);
 		float xpos = updatePDIposition [0];
-		float ypos = updatePDIposition [1]+.025f; // tweeks to center avatar on marker
-		float zpos = -1*updatePDIposition [2] + .05f;
+		float ypos = updatePDIposition [1]; // tweeks to center avatar on marker
+		float zpos = -1*updatePDIposition [2];
 
 		// rescale to UNITY Table dimensions
 		updatescalePDIposition = new Vector3 (xpos/tableScaleX, ypos/tableScaleY, zpos);
@@ -210,7 +211,7 @@ public class Sensor : MonoBehaviour {
 		transform.position = Vector3.Lerp(tablePosition, tablePositionLast, Time.deltaTime);
 
 
-		tablePositions.Add(tablePosition);
+		tablePositions.Add(tablePosition.ToString("F3"));
 
 
 
@@ -252,7 +253,7 @@ public class Sensor : MonoBehaviour {
 		Vector3 scalePDIposition = new Vector3 (tableScaleX*xpos, tableScaleY*ypos, zpos);
 		//Vector3 tablePosition = scalePDIposition - tableOrigin;
 //		SensorString.Add(dataString);
-		SensorData.Add(scalePDIposition);
+		SensorData.Add(scalePDIposition.ToString("F3"));
 		//SensorData.Add(scalePDIposition,DateTime.UtcNow.ToString("hh:mm:ss.ffffff"));
 	}
 

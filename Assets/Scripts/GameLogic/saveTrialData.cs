@@ -83,14 +83,14 @@ public class saveTrialData : MonoBehaviour {
 
 			string sensorNum = Players[i].GetComponent<Sensor>().sensorName;
 
-			List<Vector3> SensorData = new List<Vector3>();
+			List<string> SensorData = new List<string>();
 			List<string> SensorClock = new List<string>();
 
 			SensorData = Players[i].GetComponent<Sensor>().SensorData;
 			SensorClock = Players[i].GetComponent<Sensor>().Clockhardware; // hardware clock
 
 			StreamWriter sd = new StreamWriter("P" + participantNum + "Trial_" + trialNum + "_Tracker_" + sensorNum + "_sensor.txt");
-			foreach(Vector3 t in SensorData)
+			foreach(string t in SensorData)
 			{
 				sd.WriteLine(t);
 			}
@@ -106,7 +106,7 @@ public class saveTrialData : MonoBehaviour {
 
 			// Table data (position data) from Sensor.cs
 
-			List<Vector3> tablePositions = new List<Vector3>();
+			List<string> tablePositions = new List<string>();
 			List<string> playerChild = new List<string>();
 
 			tablePositions = Players[i].GetComponent<Sensor>().tablePositions;
@@ -114,7 +114,7 @@ public class saveTrialData : MonoBehaviour {
 
 
 			StreamWriter pd = new StreamWriter("P" + participantNum + "Trial_" + trialNum + "_Tracker_" + sensorNum + "_position.txt");
-			foreach(Vector3 u in tablePositions)
+			foreach(string u in tablePositions)
 			{
 				pd.WriteLine(u);
 			}
